@@ -37,4 +37,3 @@ html{overflow-x:clip}
 
 /* maker credit */
 .small-footer .maker{display:block;margin-top:14px;padding-top:12px;border-top:1px solid var(--line);max-width:340px;margin-left:auto;margin-right:auto;font-size:.68rem;letter-spacing:.02em;opacity:.85}
-.small-footer .maker a{color:inherit;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
