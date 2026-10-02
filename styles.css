@@ -26,3 +26,11 @@ body{overflow-x:clip}
 .mu.thinking .mu-body{animation:ponder 4s ease-in-out infinite}
 @media(prefers-reduced-motion:reduce){.mu.thinking .mu-body{animation:none}}
 html{overflow-x:clip}
+
+.course-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.course-card{display:flex;flex-direction:column;gap:12px;min-width:0}.course-card h2{font-size:1.35rem;margin:0;line-height:1.3}.course-card .eyebrow{font-size:.7rem}.course-card .secondary{margin-top:auto;align-self:start}.course-card:nth-child(3n+2){background:var(--lilac)}.course-card:nth-child(3n){background:var(--peach)}.r-transcript pre{white-space:pre-wrap;overflow-wrap:anywhere;font: .85rem/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;background:var(--bg);padding:15px;border-radius:12px;max-width:100%}.r-transcript{min-width:0}.activity-controls{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.activity-controls button{flex:1}.activity-output{margin-top:16px}.activity-output p{margin-top:10px}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:.9rem}th,td{padding:9px;border-bottom:1px solid var(--line);text-align:left}caption{text-align:left;font-weight:700;margin-bottom:10px}.control-label{display:block;margin:16px 0 5px;font-weight:700}.control-label select{display:block;width:100%;margin-top:8px;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--paper);color:var(--ink)}.plot-caption{font-size:.875rem;color:var(--muted);margin-top:12px}.control-value{font-variant-numeric:tabular-nums}.decision-options{display:grid;gap:10px}.math-note{overflow-wrap:anywhere}.plot .svg-label{fill:var(--ink)}@media(max-width:900px){.course-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:480px){.course-grid{grid-template-columns:1fr}.course-card{min-height:0}.course-card h2{font-size:1.45rem}.r-transcript{padding:14px}.r-transcript pre{padding:10px;font-size:.75rem}.metrics .metric strong{font-size:1.25rem}}
+
+.path-list{padding-left:22px}.path-list li{margin:10px 0;font-size:.9rem}
+
+@media(max-width:760px){.capstone-layout .instruction{order:1}}
+
+.r-transcript pre.r-console{white-space:pre;overflow-wrap:normal;overflow-x:auto;overscroll-behavior-x:contain}

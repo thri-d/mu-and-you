@@ -1,7 +1,12 @@
 /* EDIT WORDING HERE. Keep IDs and calculation names unchanged.
    This plain content file loads without any server or external service. */
-window.MU_CHAPTER = {
+(window.MU_CHAPTERS ||= []).push({
   id: 3,
+  short: "Center & spread",
+  ready: true,
+  playTitle: "Sleep remix",
+  playDescription: "One dot wanders. Which summaries follow?",
+  reference: "Mean: add all values and divide by the count. Median: the middle ordered value, or the average of the two middle values. Mode: the most frequent value. Range: maximum minus minimum. Sample variance: s² = Σ(xᵢ − x̄)² / (n − 1). Sample SD: s = √s². Population variance divides by N. Calculations use full precision; displays round at the end.",
   title: "Finding the middle. Feeling the spread.",
   subtitle: "A few sleepy students. A surprisingly big story.",
   classSleep: [7,9,6,8.5,4,6,5.5,6,9.5,6.5,6.5,8.5,8.5,7.5,6.5,5.5,7,10.5,6.5,6,6,6.5,6.5,4.5,7.5,4,5.5,6,8,6.5,8.5,3,4.5,6,4,9,4,8,8,5,5,6.5,4.5,7,8,9,5.5,8,8.5,7,6,8,7,8,8,8,8,6.5,7.5,6,6,9,7,7,7.5,6,5.5,7,8,6.5,5.5,6,7.5,8,7.5,8.5,7,5,7,8,6.5,6.5,6.5,7.5,8,9,6.5,7.5,6,5,8,6,7.5,8,7,8.5,6,8,6,5.5,7.5,6.5,8,6,6.5,6.5,8.5,7.5,7,7.5,3.5,6.5,8.5,8,7,6,4.5,7.5,8.5,8,7,6.5,8.5,5.5,8.5,6,7,5.5,10,7.5,10.5,5.5,7,9,7.5,9.5,7.5,7,10,4,6.5,5,5.5,7,6,7.5,8.5,7.5,8,8.5,3,5.5,6.5,6.5,6.5,8,8,8,5.5,8.5,6,8,5.5,7,6.5,6.5,8,10,4.5,8,4,8,7.5,8,7,8.5,7,6,6,5,7.5,8,10,7.5,7.5,7,9,9.5,5.5,8,6,6,7.5,5,7,8,6.5,9,4,7],
@@ -29,4 +34,6 @@ window.MU_CHAPTER = {
     {id:"p3-03",left:"Range",right:"Standard deviation",prompt:"I look only at the largest and smallest observations.",answer:0,explain:"Range is maximum minus minimum. SD uses all observations and their distances from the mean."},
     {id:"p3-04",left:"Sample variance",right:"Population variance",prompt:"You have every member of the population you want to describe. Which formula divides the squared deviations by the population size?",answer:1,explain:"Population variance divides by N. To estimate population variance from a sample, this app uses sample variance with n − 1."}
   ]
-};
+});
+
+Object.assign(window.MU_CHAPTERS.find(c=>c.id===3), {"rPractice": [{"concept": "Read R", "prompt": "The first and second lines are which summaries?", "choices": ["Mean, then median.", "Median, then mean.", "Variance, then SD."], "answer": 0, "explain": "The code calls mean() first, then median(). Read the function names as well as the numbers.", "rKey": "c3-summary", "id": "c3-r1"}, {"concept": "Read R", "prompt": "Which result is expressed in hours rather than squared hours?", "choices": ["The second result, from sd().", "The first result, from var().", "Neither result."], "answer": 0, "explain": "R’s var() and sd() use n − 1. Variance is in squared units; SD returns to the measurement’s units.", "rKey": "c3-sd", "id": "c3-r2"}]});

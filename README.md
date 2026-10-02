@@ -1,76 +1,48 @@
-# Mu & You: Chapter 3 prototype
+# Mu & You: Complete course
 
-A complete, playable preview of Chapter 3. It is for your review before the full course launch.
+Flat delivery: every file is at the ZIP root. No subfolders, build commands, accounts, backend, or external runtime services.
 
-Included: animated Mu, Sleep remix, four Pairs, fifteen Practice questions, confidence before feedback, a daily six-question set, a date-based mini challenge, night mode, a fictional 200-student sleep distribution, an optional personal dot, browser progress, and text/file backups.
+Launch target: Tuesday, October 6, 2026.
+Ready chapters: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12. The twelve-chapter course and test-selection capstone are included.
 
-The other eleven chapters are not included yet. Daily questions currently come from Chapter 3 only. No R output is shown in this chapter.
+Each ready chapter has one Play activity, four Pairs, fifteen Practice questions, and two additional R-output questions. Chapter 3’s original fifteen question IDs are unchanged.
 
-## Put it on your phone with GitHub Pages
+## Upload this complete build
 
-Do this on your computer. No command line is needed.
+1. Unzip the download on your computer.
+2. Open the same GitHub repository you used before. Keeping the same published address preserves browser progress.
+3. Choose Add file > Upload files. Drag ALL extracted files into the upload area together. Do not upload the ZIP or an outer folder. Do not merge code manually. GitHub replaces files with matching names; commit the complete set together.
+4. If this is a new repository, use a public repository for free GitHub Pages. Under Settings > Pages, choose Deploy from a branch, main, / (root), then Save.
+5. Wait for publication, then open Visit site from Settings > Pages. Reload the published page on your phone. Your link normally looks like https://YOUR-USERNAME.github.io/REPOSITORY-NAME/.
 
-1. Download and unzip the package. Open the `mu-and-you` folder.
-2. On GitHub, create a new **public** repository named `mu-and-you-preview`. A public repository keeps this on GitHub's free hosting option. You can choose a different name.
-3. Open that repository. Choose **Add file > Upload files**, or use the upload link shown for an empty repository.
-4. Drag everything **inside** the `mu-and-you` folder into the upload area. Include the `content` folder. Do not upload the ZIP itself, and do not upload the outer `mu-and-you` folder as an extra level.
-5. Choose **Commit changes**. You should now see `index.html`, `styles.css`, `app.js`, `icon.svg`, `manifest.webmanifest`, `README.md`, `assets`, and `content` at the top of the repository. The content folder should contain `ch03.js`.
-6. Open **Settings > Pages**. Under **Build and deployment**, select **Deploy from a branch**. Choose **main**, then **/ (root)**, and **Save**.
-7. Wait for GitHub to publish. This can take up to about ten minutes. Return to **Settings > Pages** and choose **Visit site**.
-8. Open that published link on your phone. It will normally look like `https://YOUR-USERNAME.github.io/mu-and-you-preview/`.
+All files in this ZIP belong at the repository’s top level, including ch01.js through ch12.js and the font and license files. There is no need to keep an older ZIP or old content/assets folders in the repository. Old unused files will not be loaded.
 
-The repository page on github.com is not the app. Use the published github.io link.
+GitHub help: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
 
-GitHub's instructions: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
-Publishing source help: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+## Navigation and learning
 
-## Try these first
+Home and Chapters both show all twelve chapters. Students may open any chapter in any order. Starting Play, Pairs, Practice, or R reading adds that chapter to their started list. The daily set draws from started chapters only. With no started chapters, it invites them to choose a chapter first.
 
-1. Tap Mu on Home. Toggle the moon button to see night mode.
-2. Open Chapter 3, then Play. Make a prediction, move the sleep slider, explain what changed, and compare two samples with the same mean.
-3. Try Pairs, then Practice. After choosing an answer, choose your confidence before seeing feedback.
-4. Open the daily set from Home. It is six questions drawn from Chapter 3, prioritizing confident misses and due reviews.
-5. Open My dot. Try an example, or add a sleep value. Your dot does not change the class data.
-6. Open Your space. Create a backup, copy or download it, and try restoring it in another browser. Restore replaces rather than merges progress.
+Confident misses come first, followed by due reviews, new questions, and future reviews if space remains. Within each priority tier the daily selection rotates across chapters. A six-question set cannot include every chapter on every day. Practice within a chapter stays available at any time.
 
-## Add to Home Screen
+Answer first, record confidence second, then see feedback. Correct answers on separate days advance review intervals of one, three, seven, and fourteen days. A miss resets that question for review. Same-day repetition does not advance retention. “Holding across days” needs successful unassisted recall on at least three different days since a miss, with no currently due review. These are practice indicators, not validated mastery scores.
 
-On iPhone, use Safari's Share menu and look for **Add to Home Screen**. On Android, look in your browser menu for **Add to Home screen** or **Install**. Menu wording varies by browser.
+Your space contains text/file backup, restore, and reset. Backups exclude optional personal values unless selected. Restoring replaces, rather than merges, device progress. Older Chapter 3 backups are supported; their question IDs and results are preserved. Browser storage can be blocked or cleared, so keep a backup before switching browsers or devices.
 
-This prototype is a website shortcut, not an offline download. There is no service worker or background refresh. Open it with an internet connection. The Quicksand font is bundled in assets with its license. There are no external asset services, and a system font is available if the font file cannot load.
+## Content edits
 
-## Correct a question
+Each chapter registers into window.MU_CHAPTERS from its own chNN.js file. Wording and explanations are readable in those files. Keep IDs, punctuation, formula inputs, and output keys intact. app.js handles navigation and practice. activities.js holds reusable Play interactions. math.js supplies local calculations. r-output.js holds transcripts generated by actual R during development. Never hand-edit the numeric output.
 
-Open `content/ch03.js` in GitHub, click the pencil button, change the wording, and commit. Keep the quotes, commas, question IDs, calculation names, and surrounding structure intact. Do not change text inside braces such as `{mean}`: those are computed values.
+All data are fictional and labeled. No health advice, real student research findings, or causal claims from observational comparisons are implied.
 
-Questions have stable IDs so wording corrections preserve student progress. Changing actual datasets or answers requires rechecking the calculations. All calculations use full precision; the interface rounds to at most two decimal places.
+Conventions: sample SD/variance use n - 1; default tests are two-tailed with alpha .05; confidence intervals are 95% unless stated. Welch is the independent-samples t default. Box plots use R-style hinges and observed whisker endpoints within 1.5 IQR. Numerical displays round only at the end. APA-style reporting examples use p < .001 rather than p = .000. Where conventions vary, the app states its choice.
 
-## Conventions
+R transcripts were generated by R 4.6.0 through webR in the development environment. Only static text is shipped. R does not run in students’ browsers. Transcript code includes all fictional data needed to reproduce the output. The R runtime and development checks are not included in this ZIP.
 
-- Sample variance and SD use n - 1.
-- Mean is x-bar, sample variance is s-squared, and sample SD is s.
-- Population variance uses N when describing every member of a defined population.
-- In later chapters, the default will be two-tailed tests with alpha .05, APA 7 reporting, and Welch independent-samples t tests. No inferential tests are included in this prototype.
-- All people and sleep observations are simulated for learning. The fictional class is not a reference population for real student health or wellbeing.
+## Phone use
 
-## How progress behaves
+On iPhone, use Safari’s Share menu > Add to Home Screen. On Android, look for Add to Home screen or Install in the browser menu. This is a website shortcut, not an offline download. The bundled Quicksand font has a system fallback. No external fonts, analytics, APIs, or services are loaded by the app.
 
-Answers and optional personal values stay in browser storage. No names, accounts, analytics, or answer uploads are used. A host still receives ordinary requests for web files.
+## Quick review
 
-Correct answers across separate days move through review intervals of one, three, seven, and fourteen days. A missed answer becomes ready today. A confident miss gets priority and stays flagged until a successful return on a later day. Repeating a question successfully on the same day does not advance its retention level. "Holding across days" requires at least three successful days since a miss and no currently due review. These are practice indicators, not validated mastery scores.
-
-The weekly row marks days with a completed learning interaction. There is no streak that resets when a day is missed.
-
-Progress belongs to a browser and device. Private browsing, clearing website data, browser storage policies, or changing devices can remove or separate it. Create a backup before switching. Backup text is encoded, not encrypted, and excludes your optional sleep value unless you select its checkbox.
-
-If storage is blocked, the app still works for the current page session and shows a notice. Export a backup before closing it.
-
-## Troubleshooting
-
-- **404 after publishing:** Check that `index.html` is at the repository root and Pages uses main / (root).
-- **Plain text or a file list:** Open the published Pages link, not the repository.
-- **Blank app:** Confirm `app.js` and `content/ch03.js` were uploaded with their exact names.
-- **Older version still appears:** Allow publication to finish, then reload the page. No service worker is installed.
-- **Progress did not follow me:** Restore your backup in the new browser. Home Screen and browser storage may be separate.
-
-You can double-click `index.html` on a laptop for a quick local look, but use the published link for phone testing and dependable browser storage behavior.
+Try one Play, one Pairs session, and one confidence-step Practice session. Start two chapters and try a daily set. Toggle night mode. Add/remove a personal dot. Export a backup, then restore it in another browser. Review the R code and output in each chapter. Physical iPhone/Safari testing is still recommended; automated checks use Chromium at phone and laptop sizes.
