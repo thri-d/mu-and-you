@@ -1,4 +1,4 @@
-# Mu & You: Complete course
+# Mu & You: Complete course for PSY 230 Students - University of Arizona 
 
 Flat delivery: every file is at the ZIP root. No subfolders, build commands, accounts, backend, or external runtime services.
 
