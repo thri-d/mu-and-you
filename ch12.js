@@ -163,7 +163,7 @@
         "Whether the predictor was randomly assigned."
       ],
       "answer": 0,
-      "explain": "Slope inference is conditional on the model and design. It does not test causal identification or perfect prediction.",
+      "explain": "The test assumes the regression model and study design are appropriate. It does not show that the predictor causes the outcome, or that predictions will be perfect.",
       "id": "c12-13"
     },
     {

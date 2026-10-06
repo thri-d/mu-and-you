@@ -7,7 +7,7 @@
   "subtitle": "Let an estimate tell you more than a yes or no.",
   "playTitle": "The uncertainty window",
   "playDescription": "Compare effect magnitude with the width of an interval.",
-  "reference": "Statistical significance is not practical importance. A standardized effect expresses a difference relative to a stated SD. Here, one-sample Cohen’s d = (x̄ − μ₀) / s. A t confidence interval for a mean is x̄ ± t* × s / √n under the model assumptions. Frequentist 95% confidence describes long-run coverage of the procedure, not a 95% posterior probability for a fixed parameter. Higher confidence widens an interval; more independent observations usually narrow it. Practical importance depends on context. Default intervals here use 95% confidence.",
+  "reference": "Statistical significance is not practical importance. A standardized effect expresses a difference relative to a stated SD. Here, one-sample Cohen’s d = (x̄ − μ₀) / s. A t confidence interval for a mean is x̄ ± t* × s / √n under the model assumptions. 95% confidence describes the method: across many repeated samples, about 95% of intervals built this way would capture the true mean. It does not mean there is a 95% probability that this one interval contains it. Higher confidence widens an interval; more independent observations usually narrow it. Practical importance depends on context. Default intervals here use 95% confidence.",
   "practice": [
     {
       "concept": "effect size",
@@ -72,7 +72,7 @@
     },
     {
       "concept": "confidence intervals",
-      "prompt": "A frequentist confidence interval primarily communicates…",
+      "prompt": "A confidence interval primarily communicates…",
       "choices": [
         "An estimate’s uncertainty under a stated procedure and assumptions.",
         "The middle observations in the sample.",
@@ -91,7 +91,7 @@
         "95% of observations must be inside the interval."
       ],
       "answer": 0,
-      "explain": "The interval varies between samples; the parameter is fixed in the frequentist model.",
+      "explain": "The interval changes from sample to sample; the true parameter stays fixed.",
       "id": "c6-07"
     },
     {

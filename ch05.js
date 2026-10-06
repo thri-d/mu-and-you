@@ -54,7 +54,7 @@
         "Yes, as long as the histogram looks attractive."
       ],
       "answer": 0,
-      "explain": "The adequacy of a normal approximation depends on the generating distribution and sampling conditions.",
+      "explain": "How quickly sample means become approximately normal depends on the population’s shape, such as skew and extreme values, and on how the sample was collected. No single cutoff fits every case.",
       "id": "c5-04"
     },
     {
@@ -196,7 +196,7 @@
       "right": "Standard error",
       "prompt": "Spread of repeated sample means.",
       "answer": 1,
-      "explain": "SE describes the sampling variability of an estimator; SD describes observations.",
+      "explain": "SE describes how much a statistic, such as the sample mean, varies from sample to sample. SD describes how much individual observations vary.",
       "id": "p5-01"
     },
     {

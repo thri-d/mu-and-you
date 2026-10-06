@@ -7,7 +7,7 @@
   "subtitle": "Look for direction, strength, and the stories a line cannot tell.",
   "playTitle": "Make a relationship",
   "playDescription": "Change a cloud of points, then discover what one unusual point can do.",
-  "reference": "Pearson’s r describes the direction and strength of a linear association between two quantitative variables. It is unitless and lies from −1 to +1. Near-zero r does not rule out a nonlinear relationship. Outliers and restricted ranges can alter r. Correlation is symmetric and does not establish causation. The usual Pearson test uses independent pairs and a suitable bivariate-normal model for exact small-sample inference. In simple ordinary least squares regression with an intercept, R² = r².",
+  "reference": "Pearson’s r describes the direction and strength of a linear association between two quantitative variables. It is unitless and lies from −1 to +1. Near-zero r does not rule out a nonlinear relationship. Outliers and restricted ranges can alter r. Correlation is symmetric and does not establish causation. The usual Pearson test assumes independent pairs and, for exact small-sample results, roughly normal data on both variables (a bivariate-normal model). In simple ordinary least squares regression with an intercept, R² = r².",
   "practice": [
     {
       "concept": "direction",
@@ -246,7 +246,7 @@
         "Squaring a variable always makes all its values identical."
       ],
       "answer": 0,
-      "explain": "This deterministic teaching example exposes a limitation of linear correlation. Its p-value should not be treated as scientific evidence from a randomly sampled bivariate-normal population.",
+      "explain": "This made-up example shows a limit of linear correlation: the points follow an exact curve, yet r is zero. Because the data are a constructed curve rather than a random sample, treat the p-value as an illustration, not as evidence.",
       "rKey": "c11-zero",
       "id": "c11-r2"
     }

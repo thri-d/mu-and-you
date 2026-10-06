@@ -7,7 +7,7 @@
   "subtitle": "Compare variability, then look for effects that depend on context.",
   "playTitle": "Between, within, together",
   "playDescription": "Change group separation and explore a two-factor interaction.",
-  "reference": "One-way ANOVA tests equality of population means across levels of one factor. F compares between-group mean square with within-group mean square. A significant omnibus test says at least one mean differs, not which ones. Follow-up comparisons should match the question and address multiplicity. Classical ANOVA assumes independent observations, normally distributed errors within cells, and equal error variances. Two-way ANOVA includes two factors, their main effects, and an interaction. An interaction means the effect of one factor depends on the other. This app uses balanced designs, so the displayed sums of squares agree across the usual types. η² here is SSbetween / SStotal for one-way ANOVA.",
+  "reference": "One-way ANOVA tests equality of population means across levels of one factor. F compares between-group mean square with within-group mean square. A significant omnibus test says at least one mean differs, not which ones. Follow-up comparisons should match the question and correct for running multiple tests. Classical ANOVA assumes independent observations, normally distributed errors within cells, and equal error variances. Two-way ANOVA includes two factors, their main effects, and an interaction. An interaction means the effect of one factor depends on the other. This app uses balanced designs, so the displayed sums of squares agree across the usual types. η² here is SSbetween / SStotal for one-way ANOVA.",
   "practice": [
     {
       "concept": "test choice",
@@ -90,7 +90,7 @@
         "To change the observed data."
       ],
       "answer": 0,
-      "explain": "Multiplicity adjustments address the extra opportunities for false positives. The adjustment should match the inferential goal.",
+      "explain": "Each extra comparison adds another chance of a false positive. An adjustment, such as a Bonferroni or Tukey correction, keeps the overall error rate under control. Choose one that matches your question.",
       "id": "c9-07"
     },
     {
@@ -162,7 +162,7 @@
         "Only positive outcome values."
       ],
       "answer": 0,
-      "explain": "Check independence, within-cell residual shape, and homogeneity of error variance; balanced designs do not eliminate every concern.",
+      "explain": "Check independence, within-cell residual shape, and similar error variance across groups (homogeneity of variance); balanced designs do not eliminate every concern.",
       "id": "c9-13"
     },
     {

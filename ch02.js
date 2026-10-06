@@ -7,7 +7,7 @@
   "subtitle": "Same observations. Different windows into them.",
   "playTitle": "Shape shifter",
   "playDescription": "Change histogram bins, then peek at a box plot.",
-  "reference": "Use bar charts for category counts and histograms for quantitative distributions. A histogram groups adjacent numeric intervals. This app uses equal-width bins with left-inclusive, right-exclusive intervals; the last bin includes its upper edge. Our box plots use R-style hinges and whiskers ending at the most extreme observed values within 1.5 IQR of the hinges, with remaining values plotted separately. A box-plot flag is a prompt to investigate, not automatic grounds for deletion. Label axes and units; avoid misleading axis ranges.",
+  "reference": "Use bar charts for category counts and histograms for quantitative distributions. A histogram groups adjacent numeric intervals. This app uses equal-width bins with left-inclusive, right-exclusive intervals; the last bin includes its upper edge. Our box plots follow R: the box runs between the hinges, which sit at or very near the first and third quartiles (Q1 and Q3). Whiskers end at the most extreme observed values within 1.5 IQR of the box, and values beyond them are plotted separately. A box-plot flag is a prompt to investigate, not automatic grounds for deletion. Label axes and units; avoid misleading axis ranges.",
   "practice": [
     {
       "concept": "chart choice",
@@ -97,12 +97,12 @@
       "concept": "box plots",
       "prompt": "The box spans…",
       "choices": [
-        "The lower to upper hinge, summarizing roughly the middle half.",
+        "From the lower hinge to the upper hinge (about Q1 to Q3): roughly the middle half of the data.",
         "The complete minimum-to-maximum range.",
         "A confidence interval for the population mean."
       ],
       "answer": 0,
-      "explain": "Box plots summarize the distribution of observations. Their box is not a confidence interval.",
+      "explain": "The box covers roughly the middle 50% of observations, from about Q1 to Q3. It summarizes the data themselves and is not a confidence interval.",
       "id": "c2-08"
     },
     {

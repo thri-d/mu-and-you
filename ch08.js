@@ -66,7 +66,7 @@
         "The result is invalid by definition."
       ],
       "answer": 0,
-      "explain": "The Welch-Satterthwaite degrees of freedom are a model-based approximation, not a headcount.",
+      "explain": "Welch’s df come from a formula that adjusts for unequal group variances, so they need not be a whole number. They are not a count of people.",
       "id": "c8-05"
     },
     {

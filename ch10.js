@@ -7,7 +7,7 @@
   "subtitle": "Compare what you observed with what a categorical model expects.",
   "playTitle": "Expected, observed, curious",
   "playDescription": "Move category counts away from their expected pattern.",
-  "reference": "Chi-square uses counts in mutually exclusive categories, with independent observational units. Goodness-of-fit compares one variable’s counts with specified probabilities. Independence compares two categorical variables in a contingency table. Expected count under independence is row total × column total / grand total. χ² = Σ(O − E)² / E. Standard df: categories − 1 for a fully specified goodness-of-fit model, or (rows − 1)(columns − 1) for independence. Sparse expected counts can make the asymptotic approximation poor. This app’s 2×2 R example explicitly disables continuity correction to show the uncorrected Pearson statistic; R otherwise defaults to a correction for 2×2 tables. A significant association is not proof of causation.",
+  "reference": "Chi-square uses counts in mutually exclusive categories, with independent observational units. Goodness-of-fit compares one variable’s counts with specified probabilities. Independence compares two categorical variables in a contingency table. Expected count under independence is row total × column total / grand total. χ² = Σ(O − E)² / E. Standard df: categories − 1 for a fully specified goodness-of-fit model, or (rows − 1)(columns − 1) for independence. Very small expected counts can make the usual chi-square approximation unreliable. This app’s 2×2 R example explicitly disables continuity correction to show the uncorrected Pearson statistic; R otherwise defaults to a correction for 2×2 tables. A significant association is not proof of causation.",
   "practice": [
     {
       "concept": "test choice",
@@ -79,7 +79,7 @@
         "To convert counts into causal effects."
       ],
       "answer": 0,
-      "explain": "Chi-square sums nonnegative scaled squared deviations. Larger discrepancies generally produce a larger statistic.",
+      "explain": "Squared differences are never negative, so they add up instead of cancelling. Larger gaps between observed and expected counts generally produce a larger χ².",
       "id": "c10-06"
     },
     {
@@ -139,7 +139,7 @@
         "Ignoring the issue because totals are printed."
       ],
       "answer": 0,
-      "explain": "Exact or suitable simulation-based methods may be preferable when the asymptotic approximation is poor.",
+      "explain": "When expected counts are very small, the usual chi-square approximation can be poor. An exact test, or a suitable simulation-based method, may be preferable.",
       "id": "c10-11"
     },
     {
