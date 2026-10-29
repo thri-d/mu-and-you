@@ -84,6 +84,14 @@ Statistics textbooks sometimes make different choices. Mu & You uses these throu
 
 ---
 
+## Educational design and AI-assisted development
+
+Mu & You illustrates a practical workflow for creating an educational resource with AI assistance: define the learning objective, describe the desired student interaction, develop a working version, and review it for clarity and correctness. AI tools can help draft code and revise explanations, but their output still needs human evaluation. For a statistics learning tool, especially important checks include whether the examples match the intended concept, calculations are accurate, and feedback is understandable to students.
+
+The repository's commit history documents revisions made with AI assistance. The educational purpose and decisions about what to keep or improve remain central to the project.
+
+---
+
 ## Questions and feedback
 
 Spotted a typo, a confusing explanation, or something that does not work on your device? Let your TA know. Please mention the chapter number and what you were doing when it happened.
